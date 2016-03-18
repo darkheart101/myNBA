@@ -1,0 +1,39 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th><b>Name</b></th>
+            <th><b>Team</b></th>
+            <th><b>Games</b></th>
+            <th><b>PPG</b></th>
+            <th><b>RPG</b></th>
+            <th id="colored"><b>APG</b></th>
+            <th><b>STL</b></th>
+            <th><b>TRV</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="player in myData.payload.players">
+            <td>{{ player.playerProfile.displayName }}</td>
+            <td>{{player.teamProfile.city}} {{player.teamProfile.name}} </td>
+            <td>
+                {{player.statAverage.games}}
+            </td>
+            <td>
+                {{player.statAverage.pointsPg}}
+            </td>
+            <td>
+                {{player.statAverage.rebsPg}}
+            </td>
+            <td id="colored">
+                {{player.statAverage.assistsPg}}
+            </td>
+            <td>
+                {{player.statAverage.stealsPg}}
+            </td>
+            <td>
+                {{player.statAverage.turnoversPg}}
+            </td>
+
+        </tr>
+    </tbody>
+</table>

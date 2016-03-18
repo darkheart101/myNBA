@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myNba">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="factories/myfactories.js"></script>
+    <script src="controllers/mycontrollers.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>myNBA in AngularJS</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>NBA Statistics 2015 - 2016</h1>
+            <h1><small>Regular Season</small></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li id="points" role="presentation"><a href="#home">Top Points Per Game</a></li>
+            <li id="rebounds" role="presentation"><a href="#rebs">Top Rebounds Per Game</a></li>
+            <li id="assists" role="presentation"><a href="#assists">Top Assists Per Game</a></li>
+            <li id="steals" role="presentation"><a href="#steals">Top Steals Per Game</a></li>
+        </ul>
+        <div ng-view></div>
+    </div>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            NBA Statistics Demo - AngularJS and Bootstrap
+        </div>
+    </div>
+
+</body>
+
+</html>
